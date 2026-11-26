@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>学校规定光着上课_校园议题影像观察 | 镜头里的身体与规训</title>
+<meta name="description" content="「学校规定光着上课」校园议题影像品牌，用纪录片与短片记录身体、规训与教育的边界，呈现真实的校园社区讨论与影像档案。">
+<meta name="theme-color" content="#0e0f13">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+    :root{
+        --ink:#0e0f13;
+        --ink-2:#16181f;
+        --ink-3:#1e212a;
+        --line:rgba(255,255,255,.09);
+        --line-2:rgba(255,255,255,.16);
+        --paper:#f4f1ea;
+        --fog:#a9aab4;
+        --fog-2:#75777f;
+        --accent:#e2c48b;
+        --accent-2:#c9a25a;
+        --red:#c4563f;
+        --teal:#5f9e97;
+        --radius:2px;
+        --maxw:1240px;
+        --ff:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+        background:var(--ink);
+        color:var(--paper);
+        font-family:var(--ff);
+        font-size:16px;
+        line-height:1.75;
+        letter-spacing:.02em;
+        -webkit-font-smoothing:antialiased;
+        overflow-x:hidden;
+    }
+    ::selection{background:var(--accent);color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    ul{list-style:none}
+    button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+    /* ============ 顶部导航 ============ */
+    .nav{
+        position:fixed;top:0;left:0;right:0;z-index:100;
+        display:flex;align-items:center;justify-content:space-between;
+        padding:18px clamp(16px,4vw,48px);
+        background:linear-gradient(180deg,rgba(14,15,19,.92),rgba(14,15,19,0));
+        backdrop-filter:blur(14px);
+        -webkit-backdrop-filter:blur(14px);
+        transition:background .35s ease,border-color .35s ease;
+        border-bottom:1px solid transparent;
+    }
+    .nav.scrolled{
+        background:rgba(14,15,19,.96);
+        border-bottom:1px solid var(--line);
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{
+        width:38px;height:38px;border-radius:50%;
+        border:1px solid var(--accent);
+        display:grid;place-items:center;
+        position:relative;
+        flex-shrink:0;
+    }
+    .brand-mark::before{
+        content:"";width:10px;height:10px;border-radius:50%;
+        background:var(--accent);animation:pulse 2.6s ease-in-out infinite;
+    }
+    @keyframes pulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.6);opacity:.45}}
+    .brand-name{font-size:15px;font-weight:700;letter-spacing:.14em}
+    .brand-sub{font-size:10px;color:var(--fog-2);letter-spacing:.28em;text-transform:uppercase}
+    .nav-links{display:flex;gap:clamp(14px,2.4vw,34px);align-items:center}
+    .nav-links a{
+        font-size:13px;color:var(--fog);letter-spacing:.1em;
+        position:relative;padding:6px 0;transition:color .25s;
+    }
+    .nav-links a::after{
+        content:"";position:absolute;left:0;bottom:0;height:1px;width:0;
+        background:var(--accent);transition:width .3s ease;
+    }
+    .nav-links a:hover{color:var(--paper)}
+    .nav-links a:hover::after{width:100%}
+    .nav-cta{
+        border:1px solid var(--line-2);padding:9px 18px;
+        font-size:12px;letter-spacing:.14em;color:var(--paper)!important;
+        transition:background .25s,border-color .25s,color .25s;
+    }
+    .nav-cta:hover{background:var(--accent);color:var(--ink)!important;border-color:var(--accent)}
+    .nav-cta::after{display:none!important}
+    .menu-btn{display:none;width:40px;height:40px;position:relative}
+    .menu-btn span{
+        position:absolute;left:9px;right:9px;height:1px;background:var(--paper);
+        transition:transform .3s,opacity .3s;
+    }
+    .menu-btn span:nth-child(1){top:15px}
+    .menu-btn span:nth-child(2){top:20px}
+    .menu-btn span:nth-child(3){top:25px}
+    .menu-btn.open span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+    .menu-btn.open span:nth-child(2){opacity:0}
+    .menu-btn.open span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+    .mobile-menu{
+        position:fixed;inset:0;background:var(--ink);z-index:99;
+        display:flex;flex-direction:column;justify-content:center;
+        padding:0 32px;gap:6px;
+        transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1);
+    }
+    .mobile-menu.open{transform:translateY(0)}
+    .mobile-menu a{
+        font-size:28px;font-weight:700;letter-spacing:.04em;
+        padding:14px 0;border-bottom:1px solid var(--line);color:var(--paper);
+    }
+    .mobile-menu a small{
+        display:block;font-size:11px;font-weight:400;color:var(--fog-2);
+        letter-spacing:.3em;margin-top:2px;text-transform:uppercase;
+    }
+
+    /* ============ 通用 ============ */
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+    .eyebrow{
+        font-size:11px;letter-spacing:.34em;text-transform:uppercase;
+        color:var(--accent);display:flex;align-items:center;gap:12px;
+    }
+    .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);display:inline-block}
+    .sec-head{
+        display:flex;align-items:flex-end;justify-content:space-between;
+        gap:24px;margin-bottom:clamp(28px,5vw,56px);flex-wrap:wrap;
+    }
+    .sec-title{
+        font-size:clamp(24px,3.6vw,42px);line-height:1.2;font-weight:800;
+        letter-spacing:.02em;margin-top:14px;
+    }
+    .sec-desc{max-width:420px;font-size:14px;color:var(--fog);line-height:1.9}
+    .divider{height:1px;background:var(--line);width:100%}
+
+    /* ============ HERO ============ */
+    .hero{
+        position:relative;min-height:100vh;
+        display:flex;flex-direction:column;justify-content:center;
+        padding:120px 0 60px;overflow:hidden;
+    }
+    .hero-bg{
+        position:absolute;inset:0;z-index:0;
+        background:
+            radial-gradient(ellipse 60% 50% at 72% 24%,rgba(226,196,139,.13),transparent 70%),
+            radial-gradient(ellipse 50% 60% at 18% 78%,rgba(95,158,151,.10),transparent 70%),
+            linear-gradient(180deg,#0e0f13 0%,#101218 60%,#0e0f13 100%);
+    }
+    .hero-grid{
+        position:absolute;inset:0;z-index:0;opacity:.5;
+        background-image:
+            linear-gradient(var(--line) 1px,transparent 1px),
+            linear-gradient(90deg,var(--line) 1px,transparent 1px);
+        background-size:88px 88px;
+        mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000 20%,transparent 78%);
+        -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000 20%,transparent 78%);
+    }
+    .hero-inner{position:relative;z-index:2}
+    .hero-tag{
+        display:inline-flex;align-items:center;gap:10px;
+        border:1px solid var(--line-2);padding:7px 16px;
+        font-size:11px;letter-spacing:.26em;color:var(--fog);
+        margin-bottom:clamp(20px,4vw,38px);
+    }
+    .hero-tag i{width:6px;height:6px;border-radius:50%;background:var(--red);display:block;
+        box-shadow:0 0 0 4px rgba(196,86,63,.18)}
+    h1{
+        font-size:clamp(40px,8.6vw,118px);
+        line-height:1.02;font-weight:900;letter-spacing:-.02em;
+        margin-bottom:26px;
+    }
+    h1 .line2{
+        display:block;color:transparent;
+        -webkit-text-stroke:1px rgba(244,241,234,.42);
+        font-weight:900;
+    }
+    .hero-lead{
+        max-width:600px;font-size:clamp(14px,1.5vw,17px);
+        color:var(--fog);line-height:2;margin-bottom:42px;
+    }
+    .hero-lead b{color:var(--paper);font-weight:600}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .btn{
+        display:inline-flex;align-items:center;gap:12px;
+        padding:16px 32px;font-size:13px;letter-spacing:.14em;
+        background:var(--accent);color:var(--ink);font-weight:700;
+        transition:transform .25s,background .25s,box-shadow .25s;
+    }
+    .btn:hover{background:var(--paper);transform:translateY(-2px);box-shadow:0 12px 32px rgba(226,196,139,.18)}
+    .btn-ghost{
+        background:transparent;color:var(--paper);
+        border:1px solid var(--line-2);font-weight:500;
+    }
+    .btn-ghost:hover{background:rgba(255,255,255,.05);border-color:var(--paper);box-shadow:none}
+    .btn svg{width:14px;height:14px;transition:transform .25s}
+    .btn:hover svg{transform:translateX(4px)}
+
+    .hero-stats{
+        display:grid;grid-template-columns:repeat(4,1fr);
+        gap:1px;background:var(--line);
+        border:1px solid var(--line);
+        margin-top:clamp(44px,7vw,88px);
+    }
+    .hstat{background:var(--ink);padding:26px 22px;transition:background .3s}
+    .hstat:hover{background:var(--ink-2)}
+    .hstat b{display:block;font-size:clamp(24px,3.4vw,38px);font-weight:800;
+        line-height:1;letter-spacing:-.02em;color:var(--paper)}
+    .hstat b em{font-style:normal;font-size:.5em;color:var(--accent);margin-left:2px}
+    .hstat span{font-size:11px;letter-spacing:.2em;color:var(--fog-2);display:block;margin-top:10px}
+
+    .hero-side{
+        position:absolute;right:clamp(16px,4vw,48px);top:50%;transform:translateY(-50%);
+        z-index:2;writing-mode:vertical-rl;font-size:10px;letter-spacing:.5em;
+        color:var(--fog-2);display:flex;gap:28px;align-items:center;
+    }
+    .hero-side::before{content:"";flex:0 0 80px;width:1px;background:linear-gradient(var(--accent),transparent)}
+
+    /* ============ 滚动字幕条 ============ */
+    .ticker{
+        border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        background:var(--ink-2);overflow:hidden;padding:16px 0;
+        position:relative;z-index:2;
+    }
+    .ticker-track{display:flex;gap:0;white-space:nowrap;animation:scroll 42s linear infinite;width:max-content}
+    .ticker:hover .ticker-track{animation-play-state:paused}
+    .ticker-track span{
+        font-size:13px;letter-spacing:.22em;color:var(--fog);
+        padding:0 34px;display:inline-flex;align-items:center;gap:34px;
+    }
+    .ticker-track span::after{content:"◆";font-size:8px;color:var(--accent-2)}
+    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ============ ABOUT 品牌理念 ============ */
+    .about{padding:clamp(72px,11vw,140px) 0}
+    .about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,6vw,80px);align-items:start}
+    .about-visual{
+        position:relative;aspect-ratio:4/5;
+        background:var(--ink-2);border:1px solid var(--line);
+        overflow:hidden;
+    }
+    .about-visual svg{width:100%;height:100%;display:block}
+    .about-visual .badge{
+        position:absolute;left:20px;bottom:20px;
+        background:rgba(14,15,19,.82);backdrop-filter:blur(8px);
+        border:1px solid var(--line-2);padding:12px 18px;
+        font-size:10px;letter-spacing:.24em;color:var(--fog);
+    }
+    .about-visual .badge b{color:var(--accent);display:block;font-size:13px;letter-spacing:.1em;margin-bottom:3px}
+    .about-text p{color:var(--fog);font-size:15px;line-height:2;margin-bottom:20px}
+    .about-text p strong{color:var(--paper);font-weight:600}
+    .about-quote{
+        border-left:2px solid var(--accent);
+        padding:6px 0 6px 24px;margin:32px 0;
+        font-size:clamp(17px,2vw,22px);font-weight:600;line-height:1.65;
+        color:var(--paper);letter-spacing:.01em;
+    }
+    .about-quote small{display:block;font-size:11px;font-weight:400;color:var(--fog-2);
+        letter-spacing:.24em;margin-top:14px}
+    .about-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);
+        border:1px solid var(--line);margin-top:34px}
+    .fact{background:var(--ink);padding:20px 22px}
+    .fact b{display:block;font-size:12px;color:var(--accent);letter-spacing:.18em;margin-bottom:6px}
+    .fact span{font-size:13px;color:var(--fog);line-height:1.7}
+
+    /* ============ 栏目 PROGRAMS ============ */
+    .programs{padding:clamp(72px,11vw,140px) 0;background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .prog-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .prog{
+        background:var(--ink);padding:clamp(26px,3vw,40px);
+        position:relative;overflow:hidden;transition:background .35s;
+        display:flex;flex-direction:column;min-height:280px;
+    }
+    .prog:hover{background:var(--ink-3)}
+    .prog-no{
+        font-size:11px;letter-spacing:.3em;color:var(--fog-2);margin-bottom:auto;
+    }
+    .prog h3{font-size:clamp(19px,2.2vw,24px);font-weight:800;margin:26px 0 12px;letter-spacing:.01em}
+    .prog p{font-size:13.5px;color:var(--fog);line-height:1.95;flex-grow:1}
+    .prog-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+    .prog-tags span{
+        font-size:10px;letter-spacing:.16em;color:var(--fog-2);
+        border:1px solid var(--line-2);padding:4px 10px;
+    }
+    .prog::after{
+        content:"";position:absolute;left:0;top:0;width:100%;height:2px;
+        background:var(--accent);transform:scaleX(0);transform-origin:left;
+        transition:transform .45s cubic-bezier(.7,0,.2,1);
+    }
+    .prog:hover::after{transform:scaleX(1)}
+
+    /* ============ 影片 FILMS ============ */
+    .films{padding:clamp(72px,11vw,140px) 0}
+    .film-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.4vw,28px)}
+    .film{
+        grid-column:span 4;
+        background:var(--ink-2);border:1px solid var(--line);
+        transition:transform .35s,border-color .35s,box-shadow .35s;
+        cursor:pointer;position:relative;overflow:hidden;
+    }
+    .film:hover{transform:translateY(-6px);border-color:var(--line-2);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+    .film.wide{grid-column:span 8}
+    .film-poster{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0b0c10}
+    .film.wide .film-poster{aspect-ratio:16/8.4}
+    .film-poster svg{width:100%;height:100%;display:block;transition:transform .6s ease}
+    .film:hover .film-poster svg{transform:scale(1.04)}
+    .film-play{
+        position:absolute;inset:0;display:grid;place-items:center;
+        opacity:0;transition:opacity .35s;background:rgba(14,15,19,.3);
+    }
+    .film:hover .film-play{opacity:1}
+    .play-circle{
+        width:58px;height:58px;border-radius:50%;border:1px solid rgba(244,241,234,.7);
+        display:grid;place-items:center;backdrop-filter:blur(6px);
+    }
+    .play-circle::before{content:"";width:0;height:0;border-left:14px solid var(--paper);
+        border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+    .film-meta{padding:20px 22px 24px}
+    .film-meta .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .film-meta .cat{font-size:10px;letter-spacing:.2em;color:var(--accent)}
+    .film-meta .dur{font-size:10px;letter-spacing:.12em;color:var(--fog-2)}
+    .film-meta h3{font-size:17px;font-weight:700;line-height:1.45;margin-bottom:8px}
+    .film-meta p{font-size:12.5px;color:var(--fog);line-height:1.8}
+    .film-meta .stats{display:flex;gap:18px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+    .film-meta .stats i{font-style:normal;font-size:10px;letter-spacing:.12em;color:var(--fog-2);
+        display:inline-flex;align-items:center;gap:6px}
+    .film-meta .stats i::before{content:"▶";font-size:7px;color:var(--accent-2)}
+
+    /* ============ 社区 COMMUNITY ============ */
+    .community{
+        padding:clamp(72px,11vw,140px) 0;
+        background:
+            radial-gradient(ellipse 60% 50% at 20% 0%,rgba(95,158,151,.10),transparent 65%),
+            var(--ink-2);
+        border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    }
+    .comm-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+    .voice{
+        border:1px solid var(--line);background:var(--ink);padding:clamp(22px,3vw,34px);
+        margin-bottom:18px;transition:border-color .3s,background .3s;
+        position:relative;
+    }
+    .voice:hover{border-color:var(--line-2);background:var(--ink-3)}
+    .voice-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+    .avatar{
+        width:42px;height:42px;border-radius:50%;flex-shrink:0;
+        display:grid;place-items:center;font-size:14px;font-weight:800;
+        color:var(--ink);letter-spacing:.02em;
+    }
+    .voice-who b{display:block;font-size:13.5px;font-weight:700;letter-spacing:.02em}
+    .voice-who span{font-size:10.5px;color:var(--fog-2);letter-spacing:.14em}
+    .voice p{font-size:14px;color:var(--fog);line-height:1.95}
+    .voice p em{color:var(--accent);font-style:normal}
+    .voice-foot{display:flex;gap:20px;margin-top:16px}
+    .voice-foot button{font-size:11px;letter-spacing:.1em;color:var(--fog-2);
+        display:inline-flex;align-items:center;gap:6px;transition:color .25s}
+    .voice-foot button:hover{color:var(--accent)}
+    .voice-foot button.liked{color:var(--red)}
+    .voice-foot svg{width:13px;height:13px}
+
+    .side-card{
+        border:1px solid var(--line);background:var(--ink);padding:clamp(22px,3vw,30px);
+        margin-bottom:18px;
+    }
+    .side-card h4{font-size:13px;letter-spacing:.2em;color:var(--accent);margin-bottom:20px}
+    .topic{display:flex;justify-content:space-between;align-items:center;
+        padding:13px 0;border-bottom:1px solid var(--line);font-size:13px;transition:color .25s}
+    .topic:last-child{border-bottom:none}
+    .topic:hover{color:var(--accent)}
+    .topic span:first-child{color:var(--fog)}
+    .topic b{font-size:11px;font-weight:600;color:var(--accent-2);letter-spacing:.08em}
+    .join-box{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+    .join-box p{font-size:12.5px;color:var(--fog);line-height:1.8;margin-bottom:16px}
+    .join-form{display:flex;gap:0;border:1px solid var(--line-2);overflow:hidden}
+    .join-form input{
+        flex:1;background:transparent;border:none;outline:none;color:var(--paper);
+        padding:12px 14px;font-size:13px;font-family:inherit;letter-spacing:.04em;
+    }
+    .join-form input::placeholder{color:var(--fog-2)}
+    .join-form button{background:var(--accent);color:var(--ink);padding:0 20px;
+        font-size:12px;font-weight:700;letter-spacing:.1em;transition:background .25s}
+    .join-form button:hover{background:var(--paper)}
+
+    /* ============ 数据 DATA ============ */
+    .data{padding:clamp(64px,9vw,120px) 0;border-bottom:1px solid var(--line)}
+    .data-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .dcell{background:var(--ink);padding:clamp(24px,3vw,36px);text-align:left}
+    .dcell .num{font-size:clamp(30px,4.4vw,52px);font-weight:900;letter-spacing:-.03em;line-height:1}
+    .dcell .num em{font-style:normal;color:var(--accent);font-size:.45em;margin-left:3px;letter-spacing:0}
+    .dcell .lbl{font-size:11px;letter-spacing:.22em;color:var(--fog-2);margin-top:14px;line-height:1.7}
+    .dcell .sub{font-size:11.5px;color:var(--fog-2);margin-top:4px;letter-spacing:.06em}
+
+    /* ============ 档案 ARCHIVE ============ */
+    .archive{padding:clamp(72px,11vw,140px) 0;background:var(--ink-2)}
+    .arch-list{border-top:1px solid var(--line)}
+    .arch{
+        display:grid;grid-template-columns:70px 1fr 180px 120px 40px;
+        gap:20px;align-items:center;padding:clamp(20px,2.6vw,30px) 0;
+        border-bottom:1px solid var(--line);transition:padding-left .3s,background .3s;
+        cursor:pointer;
+    }
+    .arch:hover{padding-left:14px;background:linear-gradient(90deg,rgba(226,196,139,.05),transparent)}
+    .arch .idx{font-size:11px;letter-spacing:.2em;color:var(--fog-2)}
+    .arch h3{font-size:clamp(15px,1.8vw,19px);font-weight:700;letter-spacing:.01em}
+    .arch h3 small{display:block;font-size:11px;font-weight:400;color:var(--fog-2);letter-spacing:.1em;margin-top:4px}
+    .arch .yr{font-size:12px;color:var(--fog);letter-spacing:.12em}
+    .arch .fmt{font-size:10px;letter-spacing:.16em;color:var(--accent-2);
+        border:1px solid var(--line-2);padding:4px 10px;justify-self:start}
+    .arch .arrow{font-size:14px;color:var(--fog-2);transition:transform .3s,color .3s}
+    .arch:hover .arrow{transform:translateX(5px);color:var(--accent)}
+
+    /* ============ 问答 FAQ ============ */
+    .faq{padding:clamp(72px,11vw,140px) 0}
+    .faq-wrap{max-width:900px;margin:0 auto}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-q{
+        width:100%;text-align:left;padding:clamp(20px,2.6vw,28px) 0;
+        display:flex;justify-content:space-between;align-items:center;gap:20px;
+        font-size:clamp(15px,1.9vw,18px);font-weight:600;letter-spacing:.01em;
+        transition:color .25s;
+    }
+    .faq-q:hover{color:var(--accent)}
+    .faq-q .ico{position:relative;width:16px;height:16px;flex-shrink:0}
+    .faq-q .ico::before,.faq-q .ico::after{
+        content:"";position:absolute;background:var(--accent-2);transition:transform .35s;
+    }
+    .faq-q .ico::before{left:0;top:7.5px;width:16px;height:1px}
+    .faq-q .ico::after{left:7.5px;top:0;width:1px;height:16px}
+    .faq-item.open .faq-q .ico::after{transform:rotate(90deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
+    .faq-a p{padding:0 0 26px;font-size:14px;color:var(--fog);line-height:2;max-width:760px}
+
+    /* ============ CTA ============ */
+    .cta{
+        padding:clamp(72px,12vw,150px) 0;
+        text-align:center;position:relative;overflow:hidden;
+        border-top:1px solid var(--line);
+        background:
+            radial-gradient(ellipse 55% 60% at 50% 100%,rgba(226,196,139,.12),transparent 70%),
+            var(--ink);
+    }
+    .cta h2{font-size:clamp(28px,5.6vw,66px);font-weight:900;line-height:1.12;letter-spacing:-.02em;margin:22px 0 20px}
+    .cta h2 span{color:var(--accent)}
+    .cta p{max-width:520px;margin:0 auto 38px;font-size:14.5px;color:var(--fog);line-height:1.95}
+    .cta .eyebrow{justify-content:center}
+
+    /* ============ FOOTER ============ */
+    footer{border-top:1px solid var(--line);padding:clamp(48px,7vw,80px) 0 28px;background:var(--ink-2)}
+    .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:clamp(24px,4vw,48px);margin-bottom:56px}
+    .foot-brand p{font-size:13px;color:var(--fog);line-height:1.95;margin-top:18px;max-width:300px}
+    .foot-col h4{font-size:11px;letter-spacing:.24em;color:var(--accent);margin-bottom:18px}
+    .foot-col a{display:block;font-size:13px;color:var(--fog);padding:6px 0;transition:color .25s,padding-left .25s}
+    .foot-col a:hover{color:var(--paper);padding-left:5px}
+    .foot-bottom{
+        display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+        padding-top:24px;border-top:1px solid var(--line);
+        font-size:11px;color:var(--fog-2);letter-spacing:.1em;
+    }
+    .foot-bottom .socials{display:flex;gap:20px}
+    .foot-bottom .socials a{transition:color .25s}
+    .foot-bottom .socials a:hover{color:var(--accent)}
+
+    /* ============ 响应式 ============ */
+    @media (max-width:1024px){
+        .about-grid{grid-template-columns:1fr}
+        .about-visual{max-width:460px;aspect-ratio:16/11}
+        .prog-list{grid-template-columns:repeat(2,1fr)}
+        .film.wide,.film{grid-column:span 6}
+        .comm-grid{grid-template-columns:1fr}
+        .data-grid{grid-template-columns:repeat(2,1fr)}
+        .foot-grid{grid-template-columns:1fr 1fr}
+        .hero-side{display:none}
+    }
+    @media (max-width:760px){
+        .nav-links{display:none}
+        .menu-btn{display:block}
+        .hero-stats{grid-template-columns:repeat(2,1fr)}
+        .prog-list{grid-template-columns:1fr}
+        .film.wide,.film{grid-column:span 12}
+        .arch{grid-template-columns:44px 1fr 40px;gap:12px}
+        .arch .yr,.arch .fmt{display:none}
+        .data-grid{grid-template-columns:1fr}
+        .foot-grid{grid-template-columns:1fr}
+        .about-facts{grid-template-columns:1fr}
+        .hero{padding-top:100px}
+    }
+    @media (prefers-reduced-motion:reduce){
+        *{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ================= 导航 ================= -->
+<nav class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="回到顶部">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+            <span class="brand-name">规制影像</span>
+            <span class="brand-sub">BODY / RULE / SCHOOL</span>
+        </span>
+    </a>
+    <div class="nav-links">
+        <a href="#about">品牌理念</a>
+        <a href="#programs">栏目矩阵</a>
+        <a href="#films">影片作品</a>
+        <a href="#community">社区</a>
+        <a href="#archive">档案库</a>
+        <a href="#faq">常见问答</a>
+        <a href="#join" class="nav-cta">加入共创</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#about">品牌理念<small>ABOUT</small></a>
+    <a href="#programs">栏目矩阵<small>PROGRAMS</small></a>
+    <a href="#films">影片作品<small>FILMS</small></a>
+    <a href="#community">社区<small>COMMUNITY</small></a>
+    <a href="#archive">档案库<small>ARCHIVE</small></a>
+    <a href="#join">加入共创<small>JOIN US</small></a>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-side" aria-hidden="true"><span>SCHOOL · BODY · DOCUMENTARY</span></div>
+
+    <div class="wrap hero-inner">
+        <span class="hero-tag"><i></i>第 07 季 · 校园议题影像计划</span>
+        <h1>学校规定光着上课
+            <span class="line2">当身体成为规则的一部分</span>
+        </h1>
+        <p class="hero-lead">
+            我们是一支专注于<strong>教育现场与身体规训</strong>的独立影像团队。围绕「学校规定光着上课」这一公共议题，
+            用纪录片、口述档案与社区放映，记录那些被制度书写、却被日常忽略的身体经验。
+            <strong>镜头不站队，只负责让沉默可见。</strong>
+        </p>
+        <div class="hero-actions">
+            <a href="#films" class="btn">观看主题影片
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#join" class="btn btn-ghost">提交你的故事</a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="hstat"><b data-count="126">0<em>部</em></b><span>已上线影片</span></div>
+            <div class="hstat"><b data-count="38">0<em>座</em></b><span>合作校园放映</span></div>
+            <div class="hstat"><b data-count="21400">0<em>+</em></b><span>社区注册成员</span></div>
+            <div class="hstat"><b data-count="9">0<em>年</em></b><span>持续记录时长</span></div>
+        </div>
+    </div>
+</header>
+
+<!-- ================= 滚动字幕 ================= -->
+<div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+        <span>身体不是教具</span><span>规训如何被日常化</span><span>校园空间与注意力</span>
+        <span>青春期的时间感</span><span>口述史采集计划</span><span>影像伦理与同意书</span>
+        <span>身体不是教具</span><span>规训如何被日常化</span><span>校园空间与注意力</span>
+        <span>青春期的时间感</span><span>口述史采集计划</span><span>影像伦理与同意书</span>
+    </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+    <div class="wrap">
+        <div class="about-grid">
+            <div class="about-visual">
+                <svg viewBox="0 0 400 500" role="img" aria-label="校园空间抽象示意插图">
+                    <defs>
+                        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#1e212a"/>
+                            <stop offset="1" stop-color="#0e0f13"/>
+                        </linearGradient>
+                        <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#e2c48b" stop-opacity=".55"/>
+                            <stop offset="1" stop-color="#e2c48b" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="400" height="500" fill="url(#g1)"/>
+                    <g stroke="rgba(244,241,234,.14)" stroke-width="1">
+                        <path d="M0 420 L400 420"/>
+                        <path d="M60 420 L120 170 L280 170 L340 420"/>
+                        <path d="M110 420 L150 210 L250 210 L290 420"/>
+                        <path d="M160 420 L185 250 L215 250 L240 420"/>
+                        <path d="M120 170 L120 90 L280 90 L280 170"/>
+                        <path d="M200 90 L200 34"/>
+                    </g>
+                    <g fill="url(#g2)">
+                        <rect x="140" y="180" width="120" height="150"/>
+                    </g>
+                    <g fill="rgba(244,241,234,.5)">
+                        <circle cx="200" cy="240" r="5"/>
+                        <circle cx="152" cy="330" r="3.4"/>
+                        <circle cx="248" cy="330" r="3.4"/>
+                        <circle cx="200" cy="382" r="2.6"/>
+                        <circle cx="200" cy="150" r="3"/>
+                        <circle cx="118" cy="400" r="2.4"/>
+                        <circle cx="282" cy="400" r="2.4"/>
+                    </g>
+                    <g stroke="rgba(226,196,139,.65)" stroke-width="1.2" fill="none">
+                        <path d="M200 240 L152 330"/>
+                        <path d="M200 240 L248 330"/>
+                        <path d="M200 240 L200 382"/>
+                        <circle cx="200" cy="240" r="24" stroke-dasharray="3 5"/>
+                    </g>
+                    <g fill="rgba(244,241,234,.34)" font-size="9" font-family="monospace" letter-spacing="1.6">
+                        <text x="24" y="462">FIELD NOTES / 07</text>
+                        <text x="24" y="478">SCHOOL · BODY · RULE</text>
+                    </g>
+                </svg>
+                <div class="badge">
+                    <b>记录进行中</b>
+                    DOCUMENTARY IN PROGRESS
+                </div>
+            </div>
+
+            <div class="about-text">
+                <span class="eyebrow">品牌理念</span>
+                <h2 class="sec-title" style="margin-bottom:24px">我们不急于评判，<br>先让现场被完整地看见。</h2>
+                <p>
+                    「规制影像」成立于校园议题被广泛讨论的那几年。我们发现，关于<b>学校规定光着上课</b>的争论，
+                    往往在两个极端之间来回摇摆——要么被简化为猎奇，要么被压缩成口号。
+                    真正缺席的，是具体的身体经验、具体的时间与空间，以及那些说不出口的犹豫。
+                </p>
+                <p>
+                    所以我们选择做<b>长周期的田野记录</b>：走进教室、走廊、更衣室与操场，
+                    与教师、学生、家长、校医、心理咨询师建立长期信任，
+                    用镜头和声音保存议题的复杂性。<b>每一份素材都经过知情同意与伦理审查。</b>
+                </p>
+                <div class="about-quote">
+                    “身体从来不是教育的中立背景，它一直是规则最诚实的注脚。”
+                    <small>—— 团队导演手记 · 第 07 季开拍前</small>
+                </div>
+                <div class="about-facts">
+                    <div class="fact"><b>工作方法</b><span>田野观察 · 口述史 · 参与式拍摄</span></div>
+                    <div class="fact"><b>伦理原则</b><span>知情同意 · 可撤回 · 匿名化处理</span></div>
+                    <div class="fact"><b>合作单位</b><span>校园媒体 · 教育研究者 · 公益机构</span></div>
+                    <div class="fact"><b>发行渠道</b><span>社区放映 · 影展 · 线上档案库</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 栏目 ================= -->
+<section class="programs" id="programs">
+    <div class="wrap">
+        <div class="sec-head">
+            <div>
+                <span class="eyebrow">栏目矩阵</span>
+                <h2 class="sec-title">六条线索，<br>拼接校园议题的完整拼图。</h2>
+            </div>
+            <p class="sec-desc">
+                每个栏目对应一种观察方法。它们彼此独立，又在新一季的主题下交汇，
+                共同回答同一个问题：规则如何落到身体上，以及人如何回应。
+            </p>
+        </div>
+
+        <div class="prog-list">
+            <article class="prog">
+                <span class="prog-no">栏目 01</span>
+                <h3>课堂现场</h3>
+                <p>进入真实的教室，观察一节课里身体的姿态、距离与注视。我们不预设结论，只记录时间如何在一个空间里被分配。</p>
+                <div class="prog-tags"><span>长镜头</span><span>观察式</span><span>45分钟</span></div>
+            </article>
+            <article class="prog">
+                <span class="prog-no">栏目 02</span>
+                <h3>口述档案</h3>
+                <p>与经历过不同年代校园生活的人对话。声音先行，画面后置，让记忆以第一人称的方式被保存与转述。</p>
+                <div class="prog-tags"><span>访谈</span><span>声音档案</span><span>连载</span></div>
+            </article>
+            <article class="prog">
+                <span class="prog-no">栏目 03</span>
+                <h3>规训地图</h3>
+                <p>用图形化的方式拆解校园空间：门、窗、走廊、监控、更衣区。空间本身就是一套无声的规则说明书。</p>
+                <div class="prog-tags"><span>图形化</span><span>空间研究</span><span>交互</span></div>
+            </article>
+            <article class="prog">
+                <span class="prog-no">栏目 04</span>
+                <h3>青春切片</h3>
+                <p>短片合集，每集聚焦一个具体瞬间：一次换座位、一件校服、一个午休。微小之处，往往藏着最真实的张力。</p>
+                <div class="prog-tags"><span>短片</span><span>纪实</span><span>单集10分钟</span></div>
+            </article>
+            <article class="prog">
+                <span class="prog-no">栏目 05</span>
+                <h3>圆桌与放映</h3>
+                <p>在校园与社区组织放映与讨论，把影像还给它的当事人。映后谈由参与者主导，团队只负责提供场所与设备。</p>
+                <div class="prog-tags"><span>线下</span><span>社区放映</span><span>映后谈</span></div>
+            </article>
+            <article class="prog">
+                <span class="prog-no">栏目 06</span>
+                <h3>伦理工具箱</h3>
+                <p>公开我们的拍摄伦理原则、同意书模板与匿名化流程。我们相信，议题影像的可信度，来自可被审查的方法。</p>
+                <div class="prog-tags"><span>开源</span><span>工作方法</span><span>可下载</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 影片 ================= -->
+<section class="films" id="films">
+    <div class="wrap">
+        <div class="sec-head">
+            <div>
+                <span class="eyebrow">影片作品</span>
+                <h2 class="sec-title">本季精选放映</h2>
+            </div>
+            <p class="sec-desc">
+                所有影片均在当事人知情同意下完成，部分画面经过模糊与变声处理。
+                点击卡片可查看简介与放映记录。
+            </p>
+        </div>
+
+        <div class="film-grid">
+            <article class="film wide">
+                <div class="film-poster">
+                    <svg viewBox="0 0 800 420" role="img" aria-label="影片《走廊尽头的光》海报插图">
+                        <defs>
+                            <linearGradient id="p1" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#16181f"/><stop offset="1" stop-color="#0b0c10"/>
+                            </linearGradient>
+                            <linearGradient id="p1b" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#e2c48b" stop-opacity=".8"/>
+                                <stop offset="1" stop-color="#e2c48b" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="800" height="420" fill="url(#p1)"/>
+                        <g stroke="rgba(244,241,234,.1)" fill="none">
+                            <path d="M0 300 L800 300"/>
+                            <path d="M0 340 L800 340"/>
+                            <path d="M0 380 L800 380"/>
+                            <path d="M120 0 L60 420"/>
+                            <path d="M680 0 L740 420"/>
+                        </g>
+                        <rect x="360" y="60" width="80" height="250" fill="url(#p1b)"/>
+                        <rect x="356" y="56" width="88" height="258" fill="none" stroke="rgba(226,196,139,.55)"/>
+                        <circle cx="400" cy="250" r="14" fill="rgba(244,241,234,.55)"/>
+                        <g fill="rgba(244,241,234,.24)" font-family="monospace" font-size="11" letter-spacing="3">
+                            <text x="40" y="52">FILM 01</text>
+                            <text x="40" y="72">THE LIGHT AT THE END</text>
+                        </g>
+                    </svg>
+                    <div class="film-play"><span class="play-circle"></span></div>
+                </div>
+                <div class="film-meta">
+                    <div class="top"><span class="cat">主竞赛单元</span><span class="dur">52:14</span></div>
+                    <h3>走廊尽头的光 · 关于空间与注视的一次长镜头实验</h3>
+                    <p>一条三十米的走廊，一节课的时间。摄影机固定在拐角，记录身体如何穿过被规则定义的通道。</p>
+                    <div class="stats"><i>8.9 万次观看</i><i>1.2 万点赞</i><i>37 场放映</i></div>
+                </div>
+            </article>
+
+            <article class="film">
+                <div class="film-poster">
+                    <svg viewBox="0 0 400 250" role="img" aria-label="影片《第二件校服》海报插图">
+                        <defs>
+                            <linearGradient id="p2" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#1e212a"/><stop offset="1" stop-color="#0b0c10"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="250" fill="url(#p2)"/>
+                        <g stroke="rgba(244,241,234,.13)" fill="none">
+                            <path d="M200 40 L120 210 L280 210 Z"/>
+                            <path d="M200 40 L200 210"/>
+                            <path d="M140 210 L200 120 L260 210"/>
+                        </g>
+                        <circle cx="200" cy="110" r="48" fill="none" stroke="rgba(226,196,139,.5)" stroke-dasharray="2 6"/>
+                        <circle cx="200" cy="110" r="6" fill="#e2c48b"/>
+                        <text x="24" y="234" fill="rgba(244,241,234,.24)" font-family="monospace" font-size="10" letter-spacing="2">FILM 02 / UNIFORM</text>
+                    </svg>
+                    <div class="film-play"><span class="play-circle"></span></div>
+                </div>
+                <div class="film-meta">
+                    <div class="top"><span class="cat">青春切片</span><span class="dur">11:08</span></div>
+                    <h3>第二件校服</h3>
+                    <p>关于合身与不合身的记忆，三位讲述者聊了聊他们与校服之间的漫长协商。</p>
+                    <div class="stats"><i>4.1 万次观看</i><i>6,280 点赞</i></div>
+                </div>
+            </article>
+
+            <article class="film">
+                <div class="film-poster">
+                    <svg viewBox="0 0 400 250" role="img" aria-label="影片《午休三十分钟》海报插图">
+                        <defs>
+                            <linearGradient id="p3" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#181a22"/><stop offset="1" stop-color="#0b0c10"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="250" fill="url(#p3)"/>
+                        <g fill="rgba(244,241,234,.12)">
+                            <rect x="40" y="150" width="80" height="60"/>
+                            <rect x="160" y="150" width="80" height="60"/>
+                            <rect x="280" y="150" width="80" height="60"/>
+                        </g>
+                        <g fill="none" stroke="rgba(226,196,139,.55)">
+                            <circle cx="80" cy="90" r="16"/>
+                            <circle cx="200" cy="90" r="16"/>
+                            <circle cx="320" cy="90" r="16"/>
+                        </g>
+                        <path d="M0 100 L400 100" stroke="rgba(244,241,234,.14)"/>
+                        <text x="24" y="234" fill="rgba(244,241,234,.24)" font-family="monospace" font-size="10" letter-spacing="2">FILM 03 / NOON</text>
+                    </svg>
+                    <div class="film-play"><span class="play-circle"></span></div>
+                </div>
+                <div class="film-meta">
+                    <div class="top"><span class="cat">课堂现场</span><span class="dur">29:40</span></div>
+                    <h3>午休三十分钟</h3>
+                    <p>一天里唯一不被安排的半小时。身体终于可以自己选择姿态，也可以选择什么都不做。</p>
+                    <div class="stats"><i>3.7 万次观看</i><i>5,144 点赞</i></div>
+                </div>
+            </article>
+
+            <article class="film">
+                <div class="film-poster">
+                    <svg viewBox="0 0 400 250" role="img" aria-label="影片《声音档案：1998》海报插图">
+                        <defs>
+                            <linearGradient id="p4" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0" stop-color="#1e212a"/><stop offset="1" stop-color="#0b0c10"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="250" fill="url(#p4)"/>
+                        <g stroke="rgba(226,196,139,.55)" fill="none" stroke-width="1.4">
+                            <path d="M20 130 Q50 90 80 130 T140 130 T200 130 T260 130 T320 130 T380 130"/>
+                        </g>
+                        <g stroke="rgba(244,241,234,.14)" fill="none">
+                            <path d="M20 170 Q50 140 80 170 T140 170 T200 170 T260 170 T320 170 T380 170"/>
+                            <path d="M20 200 Q50 180 80 200 T140 200 T200 200 T260 200 T320 200 T380 200"/>
+                        </g>
+                        <text x="24" y="234" fill="rgba(244,241,234,.24)" font-family="monospace" font-size="10" letter-spacing="2">FILM 04 / VOICES</text>
+                    </svg>
+                    <div class="film-play"><span class="play-circle"></span></div>
+                </div>
+                <div class="film-meta">
+                    <div class="top"><span class="cat">口述档案</span><span class="dur">38:22</span></div>
+                    <h3>声音档案：1998</h3>
+                    <p>一位五十岁的讲述者，回忆自己读书时期关于身体与着装的所有模糊规则。</p>
+                    <div class="stats"><i>2.9 万次观看</i><i>4,502 点赞</i></div>
+                </div>
+            </article>
+
+            <article class="film">
+                <div class="film-poster">
+                    <svg viewBox="0 0 400 250" role="img" aria-label="影片《监控之外》海报插图">
+                        <defs>
+                            <linearGradient id="p5" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#16181f"/><stop offset="1" stop-color="#0b0c10"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="250" fill="url(#p5)"/>
+                        <g fill="none" stroke="rgba(244,241,234,.16)">
+                            <rect x="90" y="50" width="220" height="150" rx="2"/>
+                            <rect x="130" y="80" width="60" height="90"/>
+                            <rect x="210" y="80" width="60" height="90"/>
+                        </g>
+                        <circle cx="200" cy="45" r="10" fill="none" stroke="rgba(196,86,63,.8)"/>
+                        <circle cx="200" cy="45" r="4" fill="rgba(196,86,63,.8)"/>
+                        <path d="M200 55 L200 130" stroke="rgba(196,86,63,.4)" stroke-dasharray="3 5"/>
+                        <text x="24" y="234" fill="rgba(244,241,234,.24)" font-family="monospace" font-size="10" letter-spacing="2">FILM 05 / BLIND SPOT</text>
+                    </svg>
+                    <div class="film-play"><span class="play-circle"></span></div>
+                </div>
+                <div class="film-meta">
+                    <div class="top"><span class="cat">规训地图</span><span class="dur">17:05</span></div>
+                    <h3>监控之外</h3>
+                    <p>我们绘制了一座普通中学的摄像头分布图，然后去追问：镜头没有覆盖的地方，发生了什么。</p>
+                    <div class="stats"><i>5.3 万次观看</i><i>7,918 点赞</i></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 数据 ================= -->
+<section class="data">
+    <div class="wrap">
+        <div class="data-grid">
+            <div class="dcell">
+                <div class="num" data-count="21400">0<em>+</em></div>
+                <div class="lbl">社区注册成员</div>
+                <div class="sub">来自 31 个省市与地区</div>
+            </div>
+            <div class="dcell">
+                <div class="num" data-count="870">0<em>份</em></div>
+                <div class="lbl">已归档口述材料</div>
+                <div class="sub">平均时长 42 分钟</div>
+            </div>
+            <div class="dcell">
+                <div class="num" data-count="126">0<em>部</em></div>
+                <div class="lbl">上线影片总数</div>
+                <div class="sub">累计时长 61 小时</div>
+            </div>
+            <div class="dcell">
+                <div class="num" data-count="38">0<em>座</em></div>
+                <div class="lbl">合作放映校园</div>
+                <div class="sub">覆盖 12 个城市</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 社区 ================= -->
+<section class="community" id="community">
+    <div class="wrap">
+        <div class="sec-head">
+            <div>
+                <span class="eyebrow">社区声音</span>
+                <h2 class="sec-title">议题不在会议室里，<br>它在每个人的叙述中。</h2>
+            </div>
+            <p class="sec-desc">
+                社区是这部长片的延伸。我们筛选并展示经过授权的公开留言，
+                让不同的经验在同一页面上并存，而不是互相覆盖。
+            </p>
+        </div>
+
+        <div class="comm-grid">
+            <div class="comm-main">
+                <article class="voice">
+                    <div class="voice-top">
+                        <div class="avatar" style="background:#e2c48b">林</div>
+                        <div class="voice-who"><b>林同学</b><span>高二 · 华东地区</span></div>
+                    </div>
+                    <p>看《走廊尽头的光》的时候，我突然意识到自己每天走的路线，其实早就被设计好了。哪边走、走多快、在哪停，全都有隐形的刻度。<em>片子没有指责谁，但让我第一次认真看了看自己的脚步。</em></p>
+                    <div class="voice-foot">
+                        <button class="like-btn"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14s-5.2-3.2-5.2-6.6A2.9 2.9 0 0 1 8 5.2a2.9 2.9 0 0 1 5.2 2.2C13.2 10.8 8 14 8 14Z" stroke="currentColor" stroke-width="1.2"/></svg><span class="like-count">128</span></button>
+                        <button>回复</button>
+                        <button>3 天前</button>
+                    </div>
+                </article>
+
+                <article class="voice">
+                    <div class="voice-top">
+                        <div class="avatar" style="background:#5f9e97">周</div>
+                        <div class="voice-who"><b>周老师</b><span>从教 18 年 · 班主任</span></div>
+                    </div>
+                    <p>作为老师，我也在规则的执行端。很多时候我们并不是想规范身体，只是没有别的工具。<em>这部片子给了我们一个被讨论的空间</em>，让我愿意在班会上把这些拿出来和学生聊，而不是回避。</p>
+                    <div class="voice-foot">
+                        <button class="like-btn"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14s-5.2-3.2-5.2-6.6A2.9 2.9 0 0 1 8 5.2a2.9 2.9 0 0 1 5.2 2.2C13.2 10.8 8 14 8 14Z" stroke="currentColor" stroke-width="1.2"/></svg><span class="like-count">206</span></button>
+                        <button>回复</button>
+                        <button>5 天前</button>
+                    </div>
+                </article>
+
+                <article class="voice">
+                    <div class="voice-top">
+                        <div class="avatar" style="background:#c9a25a">陈</div>
+                        <div class="voice-who"><b>陈女士</b><span>家长 · 两个孩子的母亲</span></div>
+                    </div>
+                    <p>我原本以为这类议题离我很远。但《声音档案：1998》里那位讲述者说的话，和我自己当年一模一样。<em>原来我们只是把没解决的问题传给了下一代</em>，而片子让我愿意先承认这一点。</p>
+                    <div class="voice-foot">
+                        <button class="like-btn"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14s-5.2-3.2-5.2-6.6A2.9 2.9 0 0 1 8 5.2a2.9 2.9 0 0 1 5.2 2.2C13.2 10.8 8 14 8 14Z" stroke="currentColor" stroke-width="1.2"/></svg><span class="like-count">94</span></button>
+                        <button>回复</button>
+                        <button>1 周前</button>
+                    </div>
+                </article>
+
+                <article class="voice">
+                    <div class="voice-top">
+                        <div class="avatar" style="background:#c4563f">许</div>
+                        <div class="voice-who"><b>许同学</b><span>大一 · 曾经的校园媒体主编</span></div>
+                    </div>
+                    <p>我们在校刊里讨论过类似的话题，但总是被要求「换个角度」。这里的影像让我看到另一种可能：<em>不急着给答案，先把问题完整地摆出来，本身就有力量。</em>希望有一天我们也能这样拍。</p>
+                    <div class="voice-foot">
+                        <button class="like-btn"><svg viewBox="0 0 16 16" fill="none"><path d="M8 14s-5.2-3.2-5.2-6.6A2.9 2.9 0 0 1 8 5.2a2.9 2.9 0 0 1 5.2 2.2C13.2 10.8 8 14 8 14Z" stroke="currentColor" stroke-width="1.2"/></svg><span class="like-count">171</span></button>
+                        <button>回复</button>
+                        <button>1 周前</button>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="comm-side">
+                <div class="side-card">
+                    <h4>本周热议话题</h4>
+                    <a class="topic" href="#community"><span>身体姿态与课堂注意力</span><b>328 讨论</b></a>
+                    <a class="topic" href="#community"><span>校服改版背后的逻辑</span><b>241 讨论</b></a>
+                    <a class="topic" href="#community"><span>监控与信任的边界</span><b>196 讨论</b></a>
+                    <a class="topic" href="#community"><span>青春期的隐私空间</span><b>174 讨论</b></a>
+                    <a class="topic" href="#community"><span>教师执行规则的困境</span><b>132 讨论</b></a>
+                </div>
+
+                <div class="side-card" id="join">
+                    <h4>加入共创计划</h4>
+                    <p>如果你有想被记录的经历、愿意提供拍摄场地，或是想参与我们的口述史采集，留下一封邮件，我们会在一周内回复。</p>
+                    <form class="join-form" id="joinForm" aria-label="加入共创计划">
+                        <input type="email" id="joinEmail" placeholder="你的邮箱地址" required aria-label="邮箱地址">
+                        <button type="submit">发送</button>
+                    </form>
+                    <p style="margin-top:14px;font-size:11px;color:var(--fog-2);line-height:1.7">
+                        我们承诺仅用于项目联络，不作任何商业推送，可随时申请删除。
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 档案 ================= -->
+<section class="archive" id="archive">
+    <div class="wrap">
+        <div class="sec-head">
+            <div>
+                <span class="eyebrow">档案库</span>
+                <h2 class="sec-title">影像与文字档案</h2>
+            </div>
+            <p class="sec-desc">
+                所有条目均开放查阅。部分材料需签署使用说明后方可下载，用于教学与学术引用。
+            </p>
+        </div>
+
+        <div class="arch-list">
+            <div class="arch">
+                <span class="idx">A—001</span>
+                <h3>校园空间中的身体动线研究<small>基于 12 所中学的观察记录与图纸整理</small></h3>
+                <span class="yr">2021 — 2023</span>
+                <span class="fmt">图文档案</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="arch">
+                <span class="idx">A—002</span>
+                <h3>走廊尽头的光 · 拍摄手记<small>导演与摄影的现场通信，共 46 封</small></h3>
+                <span class="yr">2023</span>
+                <span class="fmt">文字档案</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="arch">
+                <span class="idx">A—003</span>
+                <h3>口述史采集手册（开源版）<small>含同意书模板、提问框架与匿名化流程</small></h3>
+                <span class="yr">持续更新</span>
+                <span class="fmt">工具包</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="arch">
+                <span class="idx">A—004</span>
+                <h3>第二件校服 · 未使用的素材<small>三段被删除的访谈及其原因说明</small></h3>
+                <span class="yr">2024</span>
+                <span class="fmt">影像档案</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="arch">
+                <span class="idx">A—005</span>
+                <h3>学生来信选集<small>社区收到的 213 封来信节选，含手写扫描件</small></h3>
+                <span class="yr">2019 — 2025</span>
+                <span class="fmt">书信档案</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="arch">
+                <span class="idx">A—006</span>
+                <h3>伦理审查记录公开册<small>每一次拍摄的同意记录与撤回情况汇总</small></h3>
+                <span class="yr">持续更新</span>
+                <span class="fmt">公开记录</span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+    <div class="wrap">
+        <div class="faq-wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow">常见问答</span>
+                    <h2 class="sec-title">你可能会想问的</h2>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">「规制影像」是一个什么样的组织？<span class="ico"></span></button>
+                <div class="faq-a"><p>我们是一支独立运营的影像团队，由纪录片导演、教育研究者与社区志愿者组成。团队以校园议题为长期观察对象，通过影片、口述档案与社区放映，搭建一个可被讨论、可被引用的公共空间。我们不隶属于任何学校或商业机构，项目经费来自影展、公共基金与社区支持。</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">影片中的当事人如何受到保护？<span class="ico"></span></button>
+                <div class="faq-a"><p>所有出镜与发言者均签署知情同意书，明确知晓影片的用途、发行范围与可能的传播情况。我们提供随时撤回的选项，撤回后相关素材会从公开版本中移除。涉及未成年人时，我们会额外取得监护人同意，并默认采用变声与面部模糊处理，除非当事人主动要求出镜。</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">可以申请在校园或社区放映吗？<span class="ico"></span></button>
+                <div class="faq-a"><p>可以。我们鼓励非商业性质的放映与讨论，尤其是校园媒体、教师工作坊与家长社群。填写合作表单或发送邮件说明时间、场地与预期人数，我们会提供影片授权、映后讨论提纲以及必要的技术支持。所有放映均为免费授权。</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">如何向团队提供故事线索？<span class="ico"></span></button>
+                <div class="faq-a"><p>页面底部的社区板块提供了联络入口。你可以只提供一段简短的文字描述，不需要完整叙述，也不需要立即决定是否参与拍摄。我们会先进行一次不记录的初步沟通，充分了解你的意愿之后再讨论下一步。任何阶段你都可以选择停止。</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">档案库的材料可以用于学术引用吗？<span class="ico"></span></button>
+                <div class="faq-a"><p>可以。文字与图文档案在注明出处的前提下开放引用。影像材料需签署使用说明，主要用于教学、研究与公共讨论。我们会在收到申请后两个工作日内回复，并附上建议的引用格式。</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+    <div class="wrap">
+        <span class="eyebrow">持续记录中</span>
+        <h2>每一次讲述，<br>都让<span>规则</span>变得可被讨论。</h2>
+        <p>无论你是在校学生、教师、家长，还是曾经路过这段时光的人，这里都为你保留了一个位置。</p>
+        <a href="#join" class="btn">加入共创计划
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="wrap">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <a class="brand" href="#top">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span>
+                        <span class="brand-name">规制影像</span>
+                        <span class="brand-sub">BODY / RULE / SCHOOL</span>
+                    </span>
+                </a>
+                <p>以校园议题为长期观察对象的独立影像团队。记录身体、规则与教育现场之间的关系，并把这些记录交还给公众。</p>
+            </div>
+            <div class="foot-col">
+                <h4>内容</h4>
+                <a href="#programs">栏目矩阵</a>
+                <a href="#films">影片作品</a>
+                <a href="#archive">档案库</a>
+                <a href="#community">社区声音</a>
+            </div>
+            <div class="foot-col">
+                <h4>参与</h4>
+                <a href="#join">加入共创</a>
+                <a href="#faq">申请放映</a>
+                <a href="#community">提供线索</a>
+                <a href="#faq">伦理原则</a>
+            </div>
+            <div class="foot-col">
+                <h4>联络</h4>
+                <a href="#join">项目合作</a>
+                <a href="#join">媒体询问</a>
+                <a href="#join">学术引用</a>
+                <a href="#join">志愿者报名</a>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© 2025 规制影像 · 本页内容均为议题展示与影像档案，人物与场景经授权呈现。</span>
+            <span class="socials">
+                <a href="#top">微博</a>
+                <a href="#top">公众号</a>
+                <a href="#top">B 站</a>
+                <a href="#top">RSS</a>
+            </span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    /* ============ 导航滚动状态 ============ */
+    (function(){
+        var nav = document.getElementById('nav');
+        function onScroll(){
+            if(window.scrollY > 30){ nav.classList.add('scrolled'); }
+            else{ nav.classList.remove('scrolled'); }
+        }
+        window.addEventListener('scroll', onScroll, {passive:true});
+        onScroll();
+    })();
+
+    /* ============ 移动菜单 ============ */
+    (function(){
+        var btn = document.getElementById('menuBtn');
+        var menu = document.getElementById('mobileMenu');
+        function close(){
+            btn.classList.remove('open');
+            menu.classList.remove('open');
+            btn.setAttribute('aria-expanded','false');
+            document.body.style.overflow = '';
+        }
+        btn.addEventListener('click', function(){
+            var open = menu.classList.toggle('open');
+            btn.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            document.body.style.overflow = open ? 'hidden' : '';
+        });
+        menu.querySelectorAll('a').forEach(function(a){
+            a.addEventListener('click', close);
+        });
+    })();
+
+    /* ============ FAQ 折叠 ============ */
+    (function(){
+        document.querySelectorAll('.faq-q').forEach(function(q){
+            q.addEventListener('click', function(){
+                var item = q.parentElement;
+                var body = item.querySelector('.faq-a');
+                var isOpen = item.classList.contains('open');
+
+                document.querySelectorAll('.faq-item.open').forEach(function(other){
+                    if(other !== item){
+                        other.classList.remove('open');
+                        other.querySelector('.faq-q').setAttribute('aria-expanded','false');
+                        other.querySelector('.faq-a').style.maxHeight = null;
+                    }
+                });
+
+                if(isOpen){
+                    item.classList.remove('open');
+                    q.setAttribute('aria-expanded','false');
+                    body.style.maxHeight = null;
+                }else{
+                    item.classList.add('open');
+                    q.setAttribute('aria-expanded','true');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                }
+            });
+        });
+    })();
+
+    /* ============ 点赞 ============ */
+    (function(){
+        document.querySelectorAll('.like-btn').forEach(function(btn){
+            btn.addEventListener('click', function(){
+                var countEl = btn.querySelector('.like-count');
+                var n = parseInt(countEl.textContent, 10) || 0;
+                if(btn.classList.contains('liked')){
+                    btn.classList.remove('liked');
+                    countEl.textContent = Math.max(0, n - 1);
+                }else{
+                    btn.classList.add('liked');
+                    countEl.textContent = n + 1;
+                }
+            });
+        });
+    })();
+
+    /* ============ 数字滚动动画 ============ */
+    (function(){
+        var els = document.querySelectorAll('[data-count]');
+        if(!('IntersectionObserver' in window)){
+            els.forEach(function(el){
+                el.textContent = el.getAttribute('data-count');
+                var em = el.querySelector('em');
+                if(em) el.appendChild(em);
+            });
+            return;
+        }
+        var io = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+                if(!entry.isIntersecting) return;
+                var el = entry.target;
+                if(el.dataset.done) return;
+                el.dataset.done = '1';
+                var target = parseInt(el.getAttribute('data-count'), 10);
+                var emEl = el.querySelector('em');
+                var suffix = emEl ? emEl.outerHTML : '';
+                var dur = 1600;
+                var start = null;
+                function step(ts){
+                    if(!start) start = ts;
+                    var p = Math.min((ts - start) / dur, 1);
+                    var eased = 1 - Math.pow(1 - p, 3);
+                    var val = Math.floor(eased * target);
+                    el.innerHTML = val.toLocaleString('en-US') + suffix;
+                    if(p < 1) requestAnimationFrame(step);
+                    else el.innerHTML = target.toLocaleString('en-US') + suffix;
+                }
+                requestAnimationFrame(step);
+                io.unobserve(el);
+            });
+        }, {threshold:0.4});
+        els.forEach(function(el){ io.observe(el); });
+    })();
+
+    /* ============ 加入表单 ============ */
+    (function(){
+        var form = document.getElementById('joinForm');
+        var input = document.getElementById('joinEmail');
+        if(!form) return;
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            var val = input.value.trim();
+            if(!val || val.indexOf('@') === -1){
+                input.style.outline = '1px solid #c4563f';
+                setTimeout(function(){ input.style.outline = ''; }, 1200);
+                return;
+            }
+            var btn = form.querySelector('button');
+            var original = btn.textContent;
+            btn.textContent = '已收到';
+            btn.disabled = true;
+            input.value = '';
+            input.placeholder = '感谢你的信任，我们会尽快回复';
+            setTimeout(function(){
+                btn.textContent = original;
+                btn.disabled = false;
+            }, 2600);
+        });
+    })();
+
+    /* ============ 平滑锚点（含固定导航偏移） ============ */
+    (function(){
+        document.querySelectorAll('a[href^="#"]').forEach(function(a){
+            a.addEventListener('click', function(e){
+                var id = a.getAttribute('href');
+                if(id === '#' || id.length < 2) return;
+                var target = document.querySelector(id);
+                if(!target) return;
+                e.preventDefault();
+                var top = target.getBoundingClientRect().top + window.scrollY - 70;
+                window.scrollTo({top: top, behavior:'smooth'});
+            });
+        });
+    })();
+</script>
+</body>
+  </html>
